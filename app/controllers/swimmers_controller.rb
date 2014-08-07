@@ -3,6 +3,7 @@ class SwimmersController < ApplicationController
   
   def index
     @swimmers = Swimmer.all
+    
   end
   
   def viewtimes

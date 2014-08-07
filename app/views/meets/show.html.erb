@@ -7,7 +7,7 @@
   
   <strong>Events</strong>:<br>
 <% @meet.meet_events.each do |meet_event| %>
-<p><%= meet_event.length %>&nbsp<%= meet_event.stroke %></p>
+<a href="/meet_events/<%= meet_event.id %>"><p><%= meet_event.length %>&nbsp<%= meet_event.stroke %></p></a>
 
 <% end %>
 

@@ -3,6 +3,10 @@
 
 <p><a href="/new_swim_time">Add a New Swim Time</a></p>
 
+<% @swim_times.each do |swim_time| %>
+<a href="/meets/<%= swim_time.meet_event.meet.id %>"><%= swim_time.meet_event.meet.name %></a>
+<% end %>
+
 <table>
   <thead>
     <tr>

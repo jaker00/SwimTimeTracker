@@ -1,17 +1,9 @@
-
 <h1>Meet Event #<%= @meet_event.id %></h1>
 
 <div>
-  <strong>Length</strong>:<br />
-  <p><%= @meet_event.length %></p>
+  <strong>Event</strong>:<br />
+  <p><%= @meet_event.length %> <%= @meet_event.stroke %> <%= @meet_event.lengthtype %></p>
 </div>
-<div>
-  <strong>Stroke</strong>:<br />
-  <p><%= @meet_event.stroke %></p>
-</div>
-<div>
-  <strong>Length Type</strong>:<br />
-  <p><%= @meet_event.lengthtype %></p>
 <div>
   <strong>Meet</strong>:<br />
   <p><%= @meet_event.meet.name %></p>
