@@ -1,0 +1,33 @@
+
+<h1>Swimmers</h1>
+
+<p><a href="/new_swimmer">Add a New Swimmer</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name &nbsp &nbsp</th>
+      <th>Age</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @swimmers.each do |swimmer| %>
+    <tr>
+          <td><%= swimmer.last_name %>,&nbsp<%= swimmer.first_name %>&nbsp &nbsp</td>
+          <td><%= swimmer.age %>&nbsp &nbsp &nbsp</td>
+      <td><a href="/swimmers/<%= swimmer.id %>">Show</a>&nbsp
+    <% if session['username'] %>
+          
+        </td>
+      <td><a href="/swimmers/<%= swimmer.id %>/edit">Edit</a>&nbsp</td>
+      <td><a href="/swimmers/<%= swimmer.id %>/destroy">Destroy</a></td>
+    </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+

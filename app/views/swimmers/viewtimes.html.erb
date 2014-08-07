@@ -1,0 +1,24 @@
+<h1>All of <%= @swimmer.first_name %>'s times</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Event</th>
+      <th>Meet</th>
+    </tr>
+  </thead>
+
+  <tbody>
+<% @swimmer.attendances.each do |donkey| %>
+  
+ <% donkey.swim_times.each do |p| %>
+  <tr>
+  <hr>  
+  <td><%= p.time %>&nbsp &nbsp</td>
+  <td><%= p.meet_event.length %> <%= p.meet_event.stroke %>&nbsp&nbsp</td>
+  <td><%= p.meet_event.meet.name %></td>
+    <% end %>
+  <% end %>
+    </tr>
+  </tbody>
+</table>

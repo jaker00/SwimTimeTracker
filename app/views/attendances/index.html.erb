@@ -1,0 +1,30 @@
+
+<h1>Attendances</h1>
+
+<p><a href="/new_attendance">Add a New Attendance</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Meet</th>
+      <th>Swimmer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @attendances.each do |attendance| %>
+    <tr>
+          <td><%= attendance.meet.name %></td>
+      <td><%= attendance.swimmer_id %></td>
+          <td><a href="/attendances/<%= attendance.id %>">Show</a>
+        </td>
+      <td><a href="/attendances/<%= attendance.id %>/edit">Edit</a></td>
+      <td><a href="/attendances/<%= attendance.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

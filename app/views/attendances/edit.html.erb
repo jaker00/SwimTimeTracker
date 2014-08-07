@@ -1,0 +1,18 @@
+
+<h1>Editing Attendance #<%= @attendance.id %></h1>
+
+<form action="/attendances/<%= @attendance.id %>/update">
+  <div>
+    <label for="meet_id">Meet ID</label><br />
+    <input id="meet_id" name="meet_id" value="<%= @attendance.meet_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="swimmer_id">Swimmer ID</label><br />
+    <input id="swimmer_id" name="swimmer_id" value="<%= @attendance.swimmer_id  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

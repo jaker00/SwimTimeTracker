@@ -1,0 +1,42 @@
+
+<h1>Editing Meet Event #<%= @meet_event.id %></h1>
+
+<form action="/meet_events/<%= @meet_event.id %>/update">
+  <div>
+    <p>
+      <p>
+    <label for="length">length</label><br />
+    <select>
+  <option value="50">50</option>
+  <option value="100">100</option>
+  <option value="200">200</option>
+  <option value="400">400</option>
+    </select>
+  </div>
+  <div>
+    <label for="stroke">stroke</label><br />
+    <select>
+  <option value="butterfly">Fly</option>
+  <option value="backstroke">Back</option>
+  <option value="breaststroke">Breast</option>
+  <option value="freestyle">Free</option>
+</select>
+    <p>
+      <p>
+    <label for="lengthtype">length type</label><br />
+    <select>
+  <option value="SCY">SCY</option>
+  <option value="LCM">LCM</option>
+  <option value="LCY">LCY</option>
+    </select>
+  </div>
+  <div>
+    <label for="meet_id">meet_id</label><br />
+    <input id="meet_id" name="meet_id" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

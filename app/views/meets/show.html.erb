@@ -1,0 +1,16 @@
+
+<h1>Meet #<%= @meet.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br>
+  <p><%= @meet.name %></p>
+</div>
+  
+  <strong>Events</strong>:<br>
+<% @meet.meet_events.each do |meet_event| %>
+<p><%= meet_event.length %>&nbsp<%= meet_event.stroke %></p>
+
+  <% end %>
+
+<a href="/meets/<%= @meet.id %>/edit">Edit</a> |
+<a href="/meets/<%= @meet.id %>/destroy">Destroy</a>

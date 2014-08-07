@@ -1,0 +1,35 @@
+
+<h1>Editing Swimmer #<%= @swimmer.id %></h1>
+
+<form action="/swimmers/<%= @swimmer.id %>/update">
+  <div>
+    <label for="name">First name</label><br />
+    <input id="name" name="first_name" type="text" value="<%= @swimmer.first_name %>"/>
+  </div>
+  <div>
+    <div>
+    <label for="name">Last name</label><br />
+    <input id="name" name="last_name" type="text" value="<%= @swimmer.last_name %>"/>
+  </div>
+  <div>
+    <label for="username">Username</label><br />
+    <input id="username" name="username" type="text" value="<%= @swimmer.username %>"/>
+  </div>
+  <div>
+    <label for="password">Password</label><br />
+    <input id="password" name="password" type="password" />
+  </div>
+    <div>
+    <label for="password_confirmation">Password Confirmation</label><br />
+    <input id="password_confirmation" name="password_confirmation" type="password" />
+  </div>
+  <div>
+    <div>
+    <label for="name">Age</label><br />
+    <input id="name" name="age" type="integer" value="<%= @swimmer.age %>"/>
+  </div>
+    <input type="submit">
+  </div>
+</form>
+
+

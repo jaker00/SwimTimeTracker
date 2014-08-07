@@ -1,0 +1,28 @@
+
+<h1>Meets</h1>
+
+<p><a href="/new_meet">Add a New Meet</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @meets.each do |meet| %>
+    <tr>
+          <td><%= meet.name %></td>
+          <td><a href="/meets/<%= meet.id %>">Show</a>
+        </td>
+      <td><a href="/meets/<%= meet.id %>/edit">Edit</a></td>
+      <td><a href="/meets/<%= meet.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

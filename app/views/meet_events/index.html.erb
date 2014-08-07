@@ -1,0 +1,30 @@
+
+<h1>Meet Events</h1>
+
+<p><a href="/new_meet_event">Add a New Meet Event</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>&nbspMeet</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @meet_events.each do |meet_event| %>
+    <tr>
+          <td><%= meet_event.length %>  <%= meet_event.stroke %></td>
+          <td>&nbsp &nbsp<%= meet_event.meet.name %>&nbsp</td>
+          <td><a href="/meet_events/<%= meet_event.id %>">Show</a>
+        </td>
+      <td><a href="/meet_events/<%= meet_event.id %>/edit">Edit</a></td>
+      <td><a href="/meet_events/<%= meet_event.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

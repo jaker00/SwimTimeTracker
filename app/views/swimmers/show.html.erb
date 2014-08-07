@@ -1,0 +1,16 @@
+
+<h1>Swimmer #<%= @swimmer.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @swimmer.first_name %> <%= @swimmer.last_name %></p>
+</div>
+<div>
+  <strong>Age</strong>:<br />
+  <p><%= @swimmer.age %></p>
+    
+  <a href="/viewtimes/<%= @swimmer.id %>">View all Times</a>
+</div>
+<a href="/swimmers/<%= @swimmer.id %>/edit">Edit</a> |
+<a href="/swimmers/<%= @swimmer.id %>/destroy">Destroy</a>
+
