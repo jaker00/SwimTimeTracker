@@ -6,28 +6,22 @@
     <p>
       <p>
     <label for="length">length</label><br />
-    <select>
-  <option value="50">50</option>
-  <option value="100">100</option>
-  <option value="200">200</option>
-  <option value="400">400</option>
+       
+    <select name="length">
+       <%= options_for_select([[50, 50],[100, 100],[200, 200],[400, 400]]) %>
     </select>
+        
   </div>
   <div>
     <label for="stroke">stroke</label><br />
-    <select>
-  <option value="butterfly">Fly</option>
-  <option value="backstroke">Back</option>
-  <option value="breaststroke">Breast</option>
-  <option value="freestyle">Free</option>
+    <select name="stroke">
+      <%= options_for_select([['Fly', 'Fly'],['Back', 'Back'],['Breast', 'Breast'],['Free', 'Free']]) %>
 </select>
     <p>
       <p>
     <label for="lengthtype">length type</label><br />
-    <select>
-  <option value="SCY">SCY</option>
-  <option value="LCM">LCM</option>
-  <option value="LCY">LCY</option>
+    <select name="lengthtype">
+      <%= options_for_select([['SCM', 'SCM'],['LCM', 'LCM'],['SCY', 'SCY']]) %>
     </select>
   </div>
   <div>

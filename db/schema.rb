@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140805192309) do
+ActiveRecord::Schema.define(version: 20140807143257) do
 
   create_table "attendances", force: true do |t|
     t.string   "meet_id"
@@ -21,12 +21,12 @@ ActiveRecord::Schema.define(version: 20140805192309) do
   end
 
   create_table "meet_events", force: true do |t|
-    t.string   "length"
     t.string   "stroke"
     t.string   "meet_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "lengthtype"
+    t.integer  "length"
   end
 
   create_table "meets", force: true do |t|

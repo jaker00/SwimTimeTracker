@@ -9,14 +9,14 @@
   </thead>
 
   <tbody>
-<% @swimmer.attendances.each do |donkey| %>
+    <% @swimmer.attendances.each do |attendance| %>
   
- <% donkey.swim_times.each do |p| %>
+    <% attendance.swim_times.each do |st| %>
   <tr>
   <hr>  
-  <td><%= p.time %>&nbsp &nbsp</td>
-  <td><%= p.meet_event.length %> <%= p.meet_event.stroke %>&nbsp&nbsp</td>
-  <td><%= p.meet_event.meet.name %></td>
+  <td><%= st.time %>&nbsp &nbsp</td>
+  <td><%= st.meet_event.length %> <%= st.meet_event.stroke %>&nbsp&nbsp</td>
+  <td><%= st.meet_event.meet.name %></td>
     <% end %>
   <% end %>
     </tr>

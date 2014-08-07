@@ -15,8 +15,8 @@ class MeetEventsController < ApplicationController
     @meet_event = MeetEvent.new
     @meet_event.length = params[:length]
     @meet_event.stroke = params[:stroke]
-    @meet_event.meet_id = params[:meet_id]
     @meet_event.lengthtype = params[:lengthtype]
+    @meet_event.meet_id = params[:meet_id]
 
     if @meet_event.save
       redirect_to "/meet_events/#{ @meet_event.id }"

@@ -10,7 +10,13 @@
 <% @meet.meet_events.each do |meet_event| %>
 <p><%= meet_event.length %>&nbsp<%= meet_event.stroke %></p>
 
+  <strong>Swimmers</strong>:<br>
+<% @meet.attendances.swimmers.each do |swimmer| %>
+<p><%= attendance.swimmer.last_name %>,&nbsp<%= attendance.swimmer.first_name %></p>
+
   <% end %>
+<% end %>
+
 
 <a href="/meets/<%= @meet.id %>/edit">Edit</a> |
 <a href="/meets/<%= @meet.id %>/destroy">Destroy</a>

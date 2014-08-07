@@ -37,7 +37,7 @@ class SwimmersController < ApplicationController
 
   def edit
     @swimmer = Swimmer.find_by(id: params[:id])
-    if @swimmer.id != session['id']
+    if @swimmer.username != session['username']
       redirect_to "/swimmers", :notice => "Can't access that."
     end
   end
