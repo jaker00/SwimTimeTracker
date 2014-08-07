@@ -1,4 +1,3 @@
-
 <h1>Meet #<%= @meet.id %></h1>
 
 <div>
@@ -10,11 +9,12 @@
 <% @meet.meet_events.each do |meet_event| %>
 <p><%= meet_event.length %>&nbsp<%= meet_event.stroke %></p>
 
-  <strong>Swimmers</strong>:<br>
-<% @meet.attendances.swimmers.each do |swimmer| %>
-<p><%= attendance.swimmer.last_name %>,&nbsp<%= attendance.swimmer.first_name %></p>
+<% end %>
 
-  <% end %>
+  <strong>Swimmers</strong>:<br>
+<% @meet.attendances.each do |attendance| %>
+<p><%= attendance.swimmer.last_name %>,&nbsp<%= attendance.swimmer.first_name %></p>
+  
 <% end %>
 
 
