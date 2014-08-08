@@ -17,11 +17,11 @@
   <tbody>
   <% @attendances.each do |attendance| %>
     <tr>
-          <td><%= attendance.meet.name %></td>
-      <td><%= attendance.swimmer_id %></td>
-          <td><a href="/attendances/<%= attendance.id %>">Show</a>
+          <td><%= attendance.meet.name %>&nbsp &nbsp</td>
+      <td><%= attendance.swimmer.last_name %>, <%= attendance.swimmer.first_name %>&nbsp &nbsp</td>
+          <td><a href="/attendances/<%= attendance.id %>">Show</a>&nbsp
         </td>
-      <td><a href="/attendances/<%= attendance.id %>/edit">Edit</a></td>
+      <td><a href="/attendances/<%= attendance.id %>/edit">Edit</a>&nbsp</td>
       <td><a href="/attendances/<%= attendance.id %>/destroy">Destroy</a></td>
     </tr>
   <% end %>
