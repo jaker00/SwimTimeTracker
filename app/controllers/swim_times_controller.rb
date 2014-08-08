@@ -9,6 +9,7 @@ class SwimTimesController < ApplicationController
   end
 
   def new
+    @attendance = Attendance.all
   end
 
   def create

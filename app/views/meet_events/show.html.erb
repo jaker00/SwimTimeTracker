@@ -9,5 +9,11 @@
   <p><%= @meet_event.meet.name %></p>
 </div>
 
+<strong>Times</strong>:<br>
+<% @meet_event.swim_times.each do |swim_time| %>
+<p><%= swim_time.time %>&nbsp<%= swim_time.attendance.swimmer.last_name %>,&nbsp<%= swim_time.attendance.swimmer.first_name %></p>
+
+<% end %>
+
 <a href="/meet_events/<%= @meet_event.id %>/edit">Edit</a> |
 <a href="/meet_events/<%= @meet_event.id %>/destroy">Destroy</a>
