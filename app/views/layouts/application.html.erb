@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -31,6 +30,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+        <li><a href="/yourtimes">Your Times</a></li>
         <li><a href="/swimmers">Swimmers</a></li>
         <li><a href="/meets">Meets</a></li>
         <li><a href="/new_meet_event">Add an Event to a Meet</a>
@@ -42,6 +42,11 @@
         <li><a href='/sessions/destroy'>Sign Out</a></li>
   <% else %>
         <li><a href="/sessions/new">Sign In</a></li>
+  <% end %>
+  <% if flash[:notice] %>
+    <div class="alert alert-info">
+      <%= flash[:notice] %>
+    </div>
   <% end %>
   </ul>
     </div><!-- /.navbar-collapse -->

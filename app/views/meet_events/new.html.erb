@@ -8,20 +8,26 @@
     <label for="length">length</label><br />
        
     <select name="length">
-       <%= options_for_select([[50, 50],[100, 100],[200, 200],[400, 400]]) %>
+      <% @lengths.each do |l|%>
+      <option value="<%= l %>"><%= l %></option>
+      <% end %>
     </select>
         
   </div>
   <div>
     <label for="stroke">stroke</label><br />
     <select name="stroke">
-      <%= options_for_select([['Fly', 'Fly'],['Back', 'Back'],['Breast', 'Breast'],['Free', 'Free']]) %>
+      <% @strokes.each do |s|%>
+      <option value="<%= s %>"><%= s %></option>
+      <% end %>
 </select>
     <p>
       <p>
     <label for="lengthtype">length type</label><br />
     <select name="lengthtype">
-      <%= options_for_select([['SCY', 'SCY'],['LCM', 'LCM'],['SCM', 'SCM']]) %>
+      <% @lengthtypes.each do |lt|%>
+      <option value="<%= lt %>"><%= lt %></option>
+      <% end %>
     </select>
   </div>
   <div>

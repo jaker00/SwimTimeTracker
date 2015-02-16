@@ -92,6 +92,7 @@ Rails.application.routes.draw do
   get '/home' => 'welcome#home'
   get '/viewtimes/:id' => 'swimmers#viewtimes'
   
+  get '/yourtimes/:id' => 'yourtimes#times'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -9,6 +9,9 @@ class MeetEventsController < ApplicationController
   end
 
   def new
+    @lengths = MeetEvent::LENGTHS
+    @strokes = MeetEvent::STROKES
+    @lengthtypes = MeetEvent::LENGTHTYPES
   end
 
   def create
@@ -19,9 +22,9 @@ class MeetEventsController < ApplicationController
     @meet_event.meet_id = params[:meet_id]
 
     if @meet_event.save
-      redirect_to "/meet_events/#{ @meet_event.id }"
+      redirect_to "/meet_events/#{ @meet_event.id }", :notice => "Event created."
     else
-      render 'new'
+      render 'new', :notice => @meet_event.errors.full_messages.join(' ')
     end
   end
 
