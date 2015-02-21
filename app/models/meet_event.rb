@@ -9,7 +9,15 @@ class MeetEvent < ActiveRecord::Base
   validates_presence_of :meet_id,
   :message => "must not be empty"
   
-  validates_inclusion_of :length, :stroke, :lengthtype
-  :in => LENGTHS, STROKES, LENGTHTYPES
+  validates_inclusion_of :length,
+  :in => LENGTHS,
+  :message => "%{value} is not allowed"
+  
+  validates_inclusion_of :stroke,
+  :in => STROKES,
+  :message => "%{value} is not allowed"
+  
+  validates_inclusion_of :lengthtype,
+  :in => LENGTHTYPES
   :message => "%{value} is not allowed"
 end
