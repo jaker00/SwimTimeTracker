@@ -1,18 +1,27 @@
 
 <center><h1>New Meet Event</h1>
 
+
+<% if @meet_event && @meet_event.errors %>
+<ul>
+  <% @meet_event.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
+<% end %>
+
 <form action="/create_meet_event">
   <div>
     <p>
       <p>
     <label for="length">length</label><br />
-       
+
     <select name="length">
       <% @lengths.each do |l|%>
       <option value="<%= l %>"><%= l %></option>
       <% end %>
     </select>
-        
+
   </div>
   <div>
     <label for="stroke">stroke</label><br />

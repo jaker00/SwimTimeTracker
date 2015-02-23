@@ -20,11 +20,14 @@ class MeetEventsController < ApplicationController
     @meet_event.stroke = params[:stroke]
     @meet_event.lengthtype = params[:lengthtype]
     @meet_event.meet_id = params[:meet_id]
-
+    @lengths = MeetEvent::LENGTHS
+    @strokes = MeetEvent::STROKES
+    @lengthtypes = MeetEvent::LENGTHTYPES
     if @meet_event.save
       redirect_to "/meet_events/#{ @meet_event.id }", :notice => "Event created."
     else
-      render 'new', :notice => @meet_event.errors.full_messages.join(' ')
+      # you actually can't have a notice when you render, you'll need to display the errors in the view
+      render 'new'
     end
   end
 
